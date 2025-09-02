@@ -41,10 +41,23 @@ main {
     border-color: beige;
 }
 
+.last-updated {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin: 1rem 3rem 4rem 3rem;
+}
+
+.uppg-updated {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
 
 .uppg {
+    padding-bottom: 1rem;
     margin: 1rem 3rem;
     font-size: 1.1rem;
+    border-bottom: 4px solid #333;
 }
 
 .uppg>.uppg-header {
