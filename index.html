@@ -21,7 +21,7 @@
         </header>
 
         <main>
-            <p class="last-updated">Senast uppdaterad: 2025-09-04 (Uppg2)</p>
+            <p class="last-updated">Senast uppdaterad: 2025-09-05 (Uppg2)</p>
 
             <section class="uppg" id="uppg1">
                 <h2 class="uppg-header">Uppg1</h2>
@@ -76,21 +76,58 @@
 
             <section class="uppg" id="uppg2">
                 <h2 class="uppg-header">Uppg2</h2>
-                <p class="uppg-updated">Uppdaterad: 2025-09-04</p>
+                <p class="uppg-updated">Uppdaterad: 2025-09-05</p>
+
+                <p class="uppg-subheader">Deluppgift 0</p>
+                <p>
+                    För att hämta "resultatet.txt" använde jag curl för att
+                    hämta filen från servern till lokal fil - "tempRes.txt" och
+                    iconv för att konvertera den till UTF-8 och skriva till
+                    "resultat.txt":
+                </p>
                 <p class="code">
                     curl
                     https://www.ida.liu.se/~TDP001/2025/material/resultat.txt -o
+                    tempRes.txt | iconv -f ISO-8859-1 -t UTF-8 tempRes.txt >
                     resultat.txt
                 </p>
+                <br />
+
+                <p class="uppg-subheader">Deluppgift 1</p>
+                <p>För att hitta alla rader med "on" använde jag grep:</p>
                 <p class="code">grep on resultat.txt</p>
+                <br />
+
+                <p class="uppg-subheader">Deluppgift 2</p>
+                <p>
+                    För att skriva ut alla efternamn utom de som innehåller
+                    "son" använde jag cut för att få tag på alla efternamn och
+                    grep på dessa efternamn med -v som är flagga för "invert
+                    match":
+                </p>
                 <p class="code">
                     cut -d' ' -f2 resultat.txt | grep -v son | head -n5
+                </p>
+                <br />
+
+                <p class="uppg-subheader">Deluppgift 3</p>
+                <p>
+                    För att hitta antalet namn med "an" använde jag cut för att
+                    dra ut alla namn, grep på dessa namn med "an" och wc -l för
+                    att räkna antalet rader (-l flagga för att räkna antalet
+                    rader istället för antalet ord/tecken):
                 </p>
                 <p class="code">
                     cut -d' ' -f1-2 resultat.txt | grep an | wc -l
                 </p>
+                <br />
 
-                <a href="./uppg4.pdf">PDF-mallen för uppg4</a>
+                <p class="uppg-subheader">Deluppgift 4</p>
+                <p>
+                    Jag använde mig av Overleaf för att ändra på latex koden och
+                    kompilera den till PDF
+                </p>
+                <a href="./uppg4.pdf">Ändrat PDF-mallen</a>
             </section>
 
             <section class="uppg" id="uppg3">

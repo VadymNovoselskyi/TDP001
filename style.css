@@ -66,6 +66,12 @@ main {
     font-weight: 800;
 }
 
+.uppg-subheader {
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 0.2rem;
+}
+
 .code {
     font-size: 1.3rem;
     font-weight: 900;
