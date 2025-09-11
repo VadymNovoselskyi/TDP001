@@ -21,7 +21,7 @@
         </header>
 
         <main>
-            <p class="last-updated">Senast uppdaterad: 2025-09-05 (Uppg2)</p>
+            <p class="last-updated">Senast uppdaterad: 2025-09-11 (Uppg2)</p>
 
             <section class="uppg" id="uppg1">
                 <h2 class="uppg-header">Uppg1</h2>
@@ -76,7 +76,7 @@
 
             <section class="uppg" id="uppg2">
                 <h2 class="uppg-header">Uppg2</h2>
-                <p class="uppg-updated">Uppdaterad: 2025-09-05</p>
+                <p class="uppg-updated">Uppdaterad: 2025-09-11</p>
 
                 <p class="uppg-subheader">Deluppgift 0</p>
                 <p>
@@ -94,8 +94,12 @@
                 <br />
 
                 <p class="uppg-subheader">Deluppgift 1</p>
-                <p>För att hitta alla rader med "on" använde jag grep:</p>
-                <p class="code">grep on resultat.txt</p>
+                <p>
+                    För att hitta alla rader med namn som avslutas med "on"
+                    använde jag grep med regex 'on\b' där \b är en "word
+                    boundary":
+                </p>
+                <p class="code">grep 'on\b' resultat.txt</p>
                 <br />
 
                 <p class="uppg-subheader">Deluppgift 2</p>
