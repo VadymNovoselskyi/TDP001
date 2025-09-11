@@ -136,48 +136,34 @@
 
             <section class="uppg" id="uppg3">
                 <h2 class="uppg-header">Uppg3</h2>
-                <p class="uppg-updated">Uppdaterad: aldrig</p>
+                <p class="uppg-updated">Uppdaterad: 2025-09-11</p>
+
+                <p class="uppg-subheader">Deluppgift 1</p>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Minus minima molestias nisi voluptatibus totam quos velit ab
-                    fuga autem! Nulla labore recusandae saepe error sapiente
-                    possimus quas molestiae, sint eum. Laborum minus autem
-                    repudiandae velit odio ex. Accusamus reiciendis nihil minima
-                    impedit esse, consequuntur molestias pariatur. Qui mollitia
-                    ad eum officia optio nisi aspernatur minima fugiat
-                    asperiores, expedita debitis iure alias aliquid dolor,
-                    voluptatum consectetur molestiae ea, non quos id. Debitis,
-                    sapiente nisi optio deserunt aliquam sit nam veritatis
-                    exercitationem minima omnis quia, nihil saepe dolores
-                    eligendi facere. Repellat deleniti magni nihil non debitis.
-                    Nihil placeat necessitatibus excepturi praesentium fugiat,
-                    facilis vel iure corrupti nemo ut blanditiis quasi omnis
-                    odit perferendis, beatae dolorem aut quia. Veniam corporis
-                    aspernatur necessitatibus magni voluptas impedit voluptatem
-                    obcaecati, laboriosam quidem? Saepe amet quia cum vel
-                    quaerat, explicabo quibusdam mollitia pariatur incidunt iure
-                    animi quos, quod beatae sapiente tempore cupiditate numquam
-                    error nihil soluta sed? Fuga voluptatibus a ut praesentium
-                    rem debitis pariatur, commodi voluptatum eveniet quisquam
-                    alias deserunt consequatur aliquam harum vitae vero quo
-                    eaque corporis, iusto consectetur aliquid doloribus? Culpa
-                    quia ullam dolorem porro amet officia, nostrum harum
-                    molestias excepturi consequatur voluptates aliquam
-                    repudiandae ut, adipisci in iste beatae perferendis
-                    asperiores. Quas autem quaerat illum dolores expedita!
-                    Quibusdam vero quos odit veritatis ducimus dicta similique
-                    incidunt eum quisquam, quidem aut, deleniti porro iste,
-                    excepturi molestias animi atque voluptatum culpa corrupti
-                    recusandae illum aliquam ipsa. Quia saepe dolores cumque
-                    sequi consequuntur aliquid, ullam aperiam nemo, dolor quidem
-                    labore explicabo est similique ducimus esse enim distinctio
-                    obcaecati harum pariatur! Repellat enim totam atque ducimus
-                    recusandae alias quis aut, molestias aliquid, sed soluta
-                    ipsam laudantium excepturi officia ex? Dolorem placeat modi
-                    maxime tempore ad tempora doloremque vero ipsum fugit, aut
-                    facere accusantium nostrum autem illum cupiditate tenetur
-                    laborum. Consequatur dicta qui est sint odio vero atque.
+                    För att hitta alla python filer använde jag -name "*.py";
+                    För att hitta alla +x filer använde jag -executable; för att
+                    kontrolera att de har #! använde jag -exec med grep kommando
+                    som kontrallerade att filar som matchade än så länge
+                    (markerad med {}) innehåller också '#!/usr/bin/python3' och
+                    efteråt printade ut filnamn med -l
                 </p>
+                <p class="code">
+                    find ./ -name "*.py" -executable -exec grep -l
+                    '#!/usr/bin/python3' {} \;
+                </p>
+                <br />
+
+                <p class="uppg-subheader">Deluppgift 2</p>
+                <p>
+                    För att hitta alla filer som har storleken mer än 5MB i home
+                    katalogen använde jag find ~ (home katalogen) och -size +5M
+                    som filtrerar alla filer med storleken över 5M
+                </p>
+                <p class="code">find ~ -size +5M</p>
+                <br />
+
+                <p class="uppg-subheader">Deluppgift 3</p>
+                <p class="code">...</p>
             </section>
 
             <section class="uppg" id="uppg4">
