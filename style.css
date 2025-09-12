@@ -73,9 +73,8 @@ main {
 }
 
 .code {
-    font-size: 1.3rem;
-    font-weight: 800;
-    padding: 1rem 0.4rem;
+    font-family: 'JetBrains Mono', monospace;
+    padding: 0.6rem;
     margin-top: 0.2rem;
     background-color: rgba(0, 0, 0, 0.2);
 }
