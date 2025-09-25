@@ -16,21 +16,19 @@
             <h2>Lab1, Webbserv</h2>
             <nav>
                 <ul>
-                    <li><a href="#uppg1">Uppg1</a></li>
-                    <li><a href="#uppg2">Uppg2</a></li>
-                    <li><a href="#uppg3">Uppg3</a></li>
-                    <li><a href="#uppg4">Uppg4</a></li>
+                    <li><a href="#uppg1">Uppgift 1</a></li>
+                    <li><a href="#uppg2">Uppgift 2</a></li>
+                    <li><a href="#uppg3">Uppgift 3</a></li>
+                    <li><a href="#uppg4">Uppgift 4</a></li>
                 </ul>
             </nav>
         </header>
 
         <main>
-            <p class="last-updated">
-                Senast uppdaterad: 2025-09-12 (Uppg2 + Uppg3)
-            </p>
+            <p class="last-updated">Senast uppdaterad: 2025-09-25 (Uppg4)</p>
 
             <section class="uppg" id="uppg1">
-                <h2 class="uppg-header">Uppg1</h2>
+                <h2 class="uppg-header">Uppgift 1</h2>
                 <p class="uppg-updated">Uppdaterad: 2025-09-02</p>
                 <p>
                     Jag loggade in på GitLab, lade till min SSH-nyckel och
@@ -81,10 +79,10 @@
             </section>
 
             <section class="uppg" id="uppg2">
-                <h2 class="uppg-header">Uppg2</h2>
+                <h2 class="uppg-header">Uppgift 2</h2>
                 <p class="uppg-updated">Uppdaterad: 2025-09-11</p>
 
-                <p class="uppg-subheader">Deluppgift 0</p>
+                <p class="uppg-subheader">Uppgift 2.0</p>
                 <p>
                     För att hämta "resultatet.txt" använde jag curl för att
                     hämta filen från servern till lokal fil - "tempRes.txt" och
@@ -99,7 +97,7 @@
                 </p>
                 <br />
 
-                <p class="uppg-subheader">Deluppgift 1</p>
+                <p class="uppg-subheader">Uppgift 2.1</p>
                 <p>
                     För att hitta alla rader med namn som avslutas med "on"
                     använde jag grep med regex 'on\b' där \b är en "word
@@ -108,7 +106,7 @@
                 <p class="code">grep 'on\b' resultat.txt</p>
                 <br />
 
-                <p class="uppg-subheader">Deluppgift 2</p>
+                <p class="uppg-subheader">Uppgift 2.2</p>
                 <p>
                     För att skriva ut alla efternamn utom de som innehåller
                     "son" använde jag cut för att få tag på alla efternamn och
@@ -120,7 +118,7 @@
                 </p>
                 <br />
 
-                <p class="uppg-subheader">Deluppgift 3</p>
+                <p class="uppg-subheader">Uppgift 2.3</p>
                 <p>
                     För att hitta antalet namn med "an" använde jag cut för att
                     dra ut alla namn, grep på dessa namn med "an" och wc -l för
@@ -132,7 +130,7 @@
                 </p>
                 <br />
 
-                <p class="uppg-subheader">Deluppgift 4</p>
+                <p class="uppg-subheader">Uppgift 2.4</p>
                 <p>
                     Jag använde mig av Overleaf för att ändra på latex koden och
                     kompilera den till PDF
@@ -141,10 +139,10 @@
             </section>
 
             <section class="uppg" id="uppg3">
-                <h2 class="uppg-header">Uppg3</h2>
+                <h2 class="uppg-header">Uppgift 3</h2>
                 <p class="uppg-updated">Uppdaterad: 2025-09-12</p>
 
-                <p class="uppg-subheader">Deluppgift 1</p>
+                <p class="uppg-subheader">Uppgift 3.1</p>
                 <p>
                     För att hitta alla python filer använde jag -name "*.py";
                     För att hitta alla +x filer använde jag -executable; för att
@@ -159,7 +157,7 @@
                 </p>
                 <br />
 
-                <p class="uppg-subheader">Deluppgift 2</p>
+                <p class="uppg-subheader">Uppgift 3.2</p>
                 <p>
                     För att hitta alla filer som har storleken mer än 5MB i home
                     katalogen använde jag find ~ (home katalogen) och -size +5M
@@ -168,7 +166,7 @@
                 <p class="code">find ~ -size +5M</p>
                 <br />
 
-                <p class="uppg-subheader">Deluppgift 3</p>
+                <p class="uppg-subheader">Uppgift 3.3</p>
                 <p>Först började jag inspelningen av macro med:</p>
                 <p class="code">C-x (</p>
                 <br />
@@ -207,49 +205,80 @@
             </section>
 
             <section class="uppg" id="uppg4">
-                <h2 class="uppg-header">Uppg4</h2>
-                <p class="uppg-updated">Uppdaterad: aldrig</p>
+                <h2 class="uppg-header">Uppgift 4</h2>
+                <p class="uppg-updated">Uppdaterad: 2025-09-25</p>
+
+                <p class="uppg-subheader">Uppgift 4.1</p>
+                <p>För att matcha liu-id använde följande:</p>
+                <p class="code">^[a-z]{4,5}\d{2,3}$</p>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Minus minima molestias nisi voluptatibus totam quos velit ab
-                    fuga autem! Nulla labore recusandae saepe error sapiente
-                    possimus quas molestiae, sint eum. Laborum minus autem
-                    repudiandae velit odio ex. Accusamus reiciendis nihil minima
-                    impedit esse, consequuntur molestias pariatur. Qui mollitia
-                    ad eum officia optio nisi aspernatur minima fugiat
-                    asperiores, expedita debitis iure alias aliquid dolor,
-                    voluptatum consectetur molestiae ea, non quos id. Debitis,
-                    sapiente nisi optio deserunt aliquam sit nam veritatis
-                    exercitationem minima omnis quia, nihil saepe dolores
-                    eligendi facere. Repellat deleniti magni nihil non debitis.
-                    Nihil placeat necessitatibus excepturi praesentium fugiat,
-                    facilis vel iure corrupti nemo ut blanditiis quasi omnis
-                    odit perferendis, beatae dolorem aut quia. Veniam corporis
-                    aspernatur necessitatibus magni voluptas impedit voluptatem
-                    obcaecati, laboriosam quidem? Saepe amet quia cum vel
-                    quaerat, explicabo quibusdam mollitia pariatur incidunt iure
-                    animi quos, quod beatae sapiente tempore cupiditate numquam
-                    error nihil soluta sed? Fuga voluptatibus a ut praesentium
-                    rem debitis pariatur, commodi voluptatum eveniet quisquam
-                    alias deserunt consequatur aliquam harum vitae vero quo
-                    eaque corporis, iusto consectetur aliquid doloribus? Culpa
-                    quia ullam dolorem porro amet officia, nostrum harum
-                    molestias excepturi consequatur voluptates aliquam
-                    repudiandae ut, adipisci in iste beatae perferendis
-                    asperiores. Quas autem quaerat illum dolores expedita!
-                    Quibusdam vero quos odit veritatis ducimus dicta similique
-                    incidunt eum quisquam, quidem aut, deleniti porro iste,
-                    excepturi molestias animi atque voluptatum culpa corrupti
-                    recusandae illum aliquam ipsa. Quia saepe dolores cumque
-                    sequi consequuntur aliquid, ullam aperiam nemo, dolor quidem
-                    labore explicabo est similique ducimus esse enim distinctio
-                    obcaecati harum pariatur! Repellat enim totam atque ducimus
-                    recusandae alias quis aut, molestias aliquid, sed soluta
-                    ipsam laudantium excepturi officia ex? Dolorem placeat modi
-                    maxime tempore ad tempora doloremque vero ipsum fugit, aut
-                    facere accusantium nostrum autem illum cupiditate tenetur
-                    laborum. Consequatur dicta qui est sint odio vero atque.
+                    ^ är start of line, [a-z]{4,5} matchar 4 eller 5 bokstäver,
+                    \d{2,3} matchar 2 eller 3 siffror och $ är end of line
                 </p>
+                <br />
+
+                <p class="uppg-subheader">Uppgift 4.2</p>
+                <p>
+                    För att matcha ett ISO-datum (YYYY-MM-DD) använde följande:
+                </p>
+                <p class="code">^(\d{4}-\d{2}-\d{2})$</p>
+
+                <br />
+
+                <p class="uppg-subheader">Uppgift 4.3</p>
+                <p>För att kontrollera rimlighet använde följande:</p>
+                <p class="code">
+                    ^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$
+                </p>
+                <p>
+                    ^ är start of line, \d{4} matchar årets 4 siffror
+                    (0000-9999), (0[1-9]|1[0-2]) matchar månaden 01-09 eller
+                    10-12, (0[1-9]|[12]\d|3[01]) matchar dagen 01-09, 10-29,
+                    30-31
+                </p>
+                <br />
+
+                <p class="uppg-subheader">Uppgift 4.4</p>
+                <p>För att matcha alla taggar använde följande:</p>
+                <pre class="code">
+import re 
+file_path = input("path to file: ")
+with open(file_path, "r") as file:
+    html = file.read()
+    tags = re.findall(r"\s*<([A-Za-z]+)[^>]*>", html)
+    print(tags)
+                    </pre
+                >
+                <p>
+                    \s* matchar 0 eller flera whitespace-tecken som möjligtvis
+                    föregår taggen om man har indentering, < är start of tag,
+                    ([A-Za-z]+) matchar 1 eller flera bokstäver - själva taggen
+                    och capture den, [^>]* matchar 0 eller flera tecken som inte
+                    är > och därmed ignorerar allt efter taggen, (för att
+                    ignorera alla attribut och liknande) och > är end of tag
+                </p>
+                <br />
+
+                <p class="uppg-subheader">Uppgift 4.5</p>
+                <p>
+                    GET används för att hämta en data, och kan innehålla
+                    GET-parametrar i URL:en i form av ?key1=value1&key2=value2.
+                    Då kan den här requesten bokmarkas (sparas för senare).
+                    GET-parametrar ska inte innehålla känsliga data som lösenord
+                    eller personlig information.
+                </p>
+                <p>
+                    POST används för att skicka data till server och innehåller
+                    data i body.
+                </p>
+                <p>
+                    GET används när man vill läsa/hämta information. POST
+                    används när man skickar in information, särskilt om den är
+                    större i mängd.
+                </p>
+
+                <p>På min blogg används GET för att hämta statisk html-fil.</p>
+                <br />
             </section>
         </main>
 
@@ -259,10 +288,10 @@
 
             <nav>
                 <ul>
-                    <li><a href="#uppg1">Uppg1</a></li>
-                    <li><a href="#uppg2">Uppg2</a></li>
-                    <li><a href="#uppg3">Uppg3</a></li>
-                    <li><a href="#uppg4">Uppg4</a></li>
+                    <li><a href="#uppg1">Uppgift 1</a></li>
+                    <li><a href="#uppg2">Uppgift 2</a></li>
+                    <li><a href="#uppg3">Uppgift 3</a></li>
+                    <li><a href="#uppg4">Uppgift 4</a></li>
                 </ul>
             </nav>
         </footer>
