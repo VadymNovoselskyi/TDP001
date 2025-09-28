@@ -20,12 +20,15 @@
                     <li><a href="#uppg2">Uppgift 2</a></li>
                     <li><a href="#uppg3">Uppgift 3</a></li>
                     <li><a href="#uppg4">Uppgift 4</a></li>
+                    <li><a href="#slutovning">Slutövning</a></li>
                 </ul>
             </nav>
         </header>
 
         <main>
-            <p class="last-updated">Senast uppdaterad: 2025-09-25 (Uppg4)</p>
+            <p class="last-updated">
+                Senast uppdaterad: 2025-09-28 (Uppgift 4 + delvis Slutövning)
+            </p>
 
             <section class="uppg" id="uppg1">
                 <h2 class="uppg-header">Uppgift 1</h2>
@@ -245,7 +248,7 @@ import re
 file_path = input("path to file: ")
 with open(file_path, "r") as file:
     html = file.read()
-    tags = re.findall(r"\s*<([A-Za-z]+)[^>]*>", html)
+    tags = re.findall(r"\s*<(\w+)[^>]*>", html)
     print(tags)
                     </pre
                 >
@@ -280,18 +283,334 @@ with open(file_path, "r") as file:
                 <p>På min blogg används GET för att hämta statisk html-fil.</p>
                 <br />
             </section>
+
+            <section class="uppg" id="slutovning">
+                <h2 class="uppg-header">Slutövning</h2>
+                <p class="uppg-updated">Uppdaterad: 2025-09-28</p>
+
+                <p class="uppg-subheader">Uppgift 2.1 - Kataloger och filer</p>
+                <p>
+                    kommando mkdir skapar kataloger och -p for att skapa alla
+                    intermidiate
+                </p>
+                <p class="code">mkdir -p ~/TDP004/lab1</p>
+                <br />
+
+                <p>kommando cd ändrar katalog i terminalen</p>
+                <p class="code">cd ~/TDP004</p>
+                <br />
+
+                <p>
+                    kommando echo skriver ut texten till terminalen och >
+                    skriver ut texten till filen README.md
+                </p>
+                <p class="code">echo Hello world > README.md</p>
+                <br />
+
+                <p><b>Skapade tomt public repo pa gitlab</b></p>
+                <br />
+
+                <p>
+                    kommando git init initierar ett nytt git-repo i nuvarande
+                    katalog
+                </p>
+                <p class="code">git init</p>
+                <br />
+
+                <p>
+                    kommando git branch -M main ändrar namn på master branch
+                    till main
+                </p>
+                <p class="code">git branch -M main</p>
+                <br />
+
+                <p>
+                    kommando git commit -m "init" skapar en ny commit med
+                    meddelandet "init"
+                </p>
+                <p class="code">git commit -m "init"</p>
+                <br />
+
+                <p>
+                    kommando git remote add origin
+                    git@gitlab.liu.se:vadno575/tdp004.git lägger till remote
+                    repository på gitlab
+                </p>
+                <p class="code">
+                    git remote add origin git@gitlab.liu.se:vadno575/tdp004.git
+                </p>
+                <br />
+
+                <p>
+                    kommando git push -u origin main skickar commiten till
+                    remote repository och -u origin gör att git push automatiskt
+                    pushar till origin (remote repository) nästa gång
+                </p>
+                <p class="code">git push -u origin main</p>
+                <br />
+
+                <p class="uppg-subheader">Uppgift 2.2 - Jobba via ssh</p>
+                <p>
+                    Skapade access token pa gitlab med read_repository och
+                    write_repository scopes for att kunna clone/pull/push fran
+                    ssh-server utan att skapa SSH-nycklar
+                </p>
+                <br />
+
+                <p>SSH</p>
+                <p class="code">ssh vadno575@ssh.edu.liu.se</p>
+                <p>[losenrdet]</p>
+                <br />
+
+                <p>TDP004 pa slutet for att skapa ge namnet till projektet</p>
+                <p class="code">
+                    git clone https://gitlab.liu.se/vadno575/tdp004.git TDP004
+                </p>
+                <p>avnadrnaman</p>
+                <p>token</p>
+                <br />
+
+                <p></p>
+                <p class="code">cd TDP004</p>
+                <br />
+
+                <p></p>
+                <p class="code">mkdir -p lab2/documentation</p>
+                <br />
+
+                <p></p>
+                <p class="code">touch lab1/lab1.cc</p>
+                <br />
+
+                <p></p>
+                <p class="code">touch lab1/lab2.cc lab1/lab2.h</p>
+                <br />
+
+                <p></p>
+                <p class="code">
+                    mv lab1/lab2.cc lab2/lab2.cc <br />
+                    mv lab1/lab2.h lab2/lab2.h
+                </p>
+                <br />
+
+                <p></p>
+                <p class="code">emacs README.md</p>
+                <p class="code">Bye bye world</p>
+                <br />
+
+                <p></p>
+                <p class="code">touch junk.temp</p>
+                <br />
+
+                <p></p>
+                <p class="code">emacs .gitignore</p>
+                <br />
+
+                <p></p>
+                <p class="code">
+                    *.temp <br />
+                    *~
+                </p>
+                <br />
+
+                <p></p>
+                <p class="code">git add .</p>
+                <br />
+
+                <p></p>
+                <p class="code">git commit -m "2.2"</p>
+                <br />
+
+                <p></p>
+                <p class="code">git push</p>
+                <p>avnadrnaman</p>
+                <p>token</p>
+                <br />
+
+                <p class="uppg-subheader">Uppgift 2.3 - Lösa en konflikt</p>
+                <p>Tillbaka pa min egen system</p>
+                <p class="code">emacs README.md</p>
+                <p class="code">
+                    Hello world <br />
+                    Some other line to <br />
+                    Another one
+                </p>
+                <br />
+
+                <p>Tillbaka pa min egen system</p>
+                <p class="code">git add .</p>
+                <br />
+                <p>Tillbaka pa min egen system</p>
+                <p class="code">git commit -m "update README"</p>
+                <br />
+                <p>Tillbaka pa min egen system</p>
+                <p class="code">git pull --no-rebase</p>
+                <br />
+
+                <p>Tillbaka pa min egen system</p>
+                <p class="code">git status</p>
+                <p class="code">
+                    On branch main <br />
+                    Your branch and 'gitlab/main' have diverged, <br />
+                    and have 1 and 1 different commits each, respectively.<br />
+                    (use "git pull" if you want to integrate the remote branch
+                    with yours) <br />
+                    You have unmerged paths. <br />
+                    (fix conflicts and run "git commit") <br />
+                    (use "git merge --abort" to abort the merge) <br />
+                    Changes to be committed: new file: <br />
+                    new file: .gitignore <br />
+                    new file: lab1/lab1.cc <br />
+                    new file: lab2/lab2.cc <br />
+                    new file: lab2/lab2.h <br />
+                    Unmerged paths: <br />
+                    (use "git add &lt;file&gt;..." to mark resolution) <br />
+                    both modified: README.md
+                </p>
+
+                <p>Tillbaka pa min egen system</p>
+                <p class="code">cat README.md</p>
+                <p class="code">
+                    &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD <br />
+                    Hello world <br />
+                    Some other line to <br />
+                    Another one <br />
+                    ======= <br />
+                    Bye bye world <br />
+                    &lt;&lt;&lt;&lt;&lt;&lt;&lt;
+                    383042bfaaa7203cc5bdfb56cb383dac7096e121
+                </p>
+                <br />
+
+                <p>Tillbaka pa min egen system</p>
+                <p class="code">emacs README.md</p>
+                <p class="code">
+                    Hello world <br />
+                    Some other line to <br />
+                    Another one <br />
+                    Bye bye world
+                </p>
+                <br />
+
+                <p>Tillbaka pa min egen system</p>
+                <p class="code">git commit -m "solve merge-conflict 2.3"</p>
+                <br />
+
+                <p class="uppg-subheader">
+                    Uppgift 2.4 - Rättigheter och skriva till fil
+                </p>
+                <p>SSH</p>
+                <p class="code">touch test.py</p>
+                <br />
+
+                <p>SSH</p>
+                <p class="code">emacs test.py</p>
+                <p class="code">
+                    #!/usr/bin/env python3 <br />
+                    <br />
+                    print("Hello world")
+                </p>
+                <br />
+
+                <p>SSH</p>
+                <p class="code">chmod +x test.py</p>
+                <br />
+
+                <p>SSH</p>
+                <p class="code">
+                    echo "Detta är en kommentar som skapats med echo" >> test.py
+                </p>
+                <br />
+
+                <p>SSH</p>
+                <p class="code">cp -r lab2 lab3</p>
+                <br />
+
+                <p>SSH</p>
+                <p class="code">
+                    mv lab3/lab2.cc lab3/lab3.cc <br />
+                    mv lab3/lab2.h lab3/lab3.h
+                </p>
+                <br />
+
+                <p>SSH</p>
+                <p class="code">
+                    scp -r vadno575@ssh.edu.liu.se:~/TDP004/lab1/ ./lab4
+                </p>
+                <br />
+
+                <p>SSH</p>
+                <p class="code">mv lab4/lab1.cc lab4/lab4.cc</p>
+                <br />
+
+                <p class="uppg-subheader">
+                    Uppgift 2.5 - Dokumentera katalogen
+                </p>
+                <p>SSH</p>
+                <p class="code">sudo apt update && sudo apt install tree -y</p>
+                <br />
+
+                <p>SSH</p>
+                <p class="code">tree . > README.md</p>
+                <br />
+
+                <p>SSH</p>
+                <p class="code">cat README.md</p>
+                <pre class="code">
+. 
+├── README.md
+├── lab1
+│   └── lab1.cc
+├── lab2
+│   ├── lab2.cc
+│   └── lab2.h
+├── lab3
+│   ├── lab3.cc
+│   └── lab3.h
+├── lab4
+│   └── lab4.cc
+└── test.py
+                    </pre
+                >
+                <br />
+
+                <p class="uppg-subheader">Uppgift 2.6 - Smått och gott</p>
+                <p>SSH</p>
+                <p class="code">find ~ -type f -executable</p>
+                <br />
+
+                <p>SSH</p>
+                <p class="code">
+                    find ~ -type f -executable -name "*.py" -exec grep -l
+                    '#!/usr/bin/env python3' {} \;
+                </p>
+                <br />
+
+                <p>SSH</p>
+                <p class="code">
+                    find ./ -maxdepth 1 -type f -exec grep '^#' {} \;
+                </p>
+                <br />
+
+                <p class="uppg-subheader">
+                    Uppgift 2.7 - Lite Bashprogrammering
+                </p>
+                <p>SSH</p>
+                <p class="code">mkdir -p ~/TDP004/lab1</p>
+                <br />
+            </section>
         </main>
 
         <footer>
             <h1 class="course-name">TDP001</h1>
             <h2>Lab1, Webbserv</h2>
-
             <nav>
                 <ul>
                     <li><a href="#uppg1">Uppgift 1</a></li>
                     <li><a href="#uppg2">Uppgift 2</a></li>
                     <li><a href="#uppg3">Uppgift 3</a></li>
                     <li><a href="#uppg4">Uppgift 4</a></li>
+                    <li><a href="#slutovning">Slutövning</a></li>
                 </ul>
             </nav>
         </footer>
