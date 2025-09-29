@@ -280,7 +280,11 @@ with open(file_path, "r") as file:
                     större i mängd.
                 </p>
 
-                <p>På min blogg används GET för att hämta statisk html-fil.</p>
+                <p>
+                    På min blogg används GET för att hämta statisk html-fil.
+                    Detta kan man kontrollera genom att gå in på DevTools >
+                    Network tab, uppdatera sidan och kolla under Method kolumn
+                </p>
                 <br />
             </section>
 
@@ -307,7 +311,7 @@ with open(file_path, "r") as file:
                 <p class="code">echo Hello world > README.md</p>
                 <br />
 
-                <p><b>Skapade tomt public repo pa gitlab</b></p>
+                <p><b>&lt;Skapade tomt public repo pa gitlab&gt;</b></p>
                 <br />
 
                 <p>
@@ -350,85 +354,99 @@ with open(file_path, "r") as file:
                 <br />
 
                 <p class="uppg-subheader">Uppgift 2.2 - Jobba via ssh</p>
+                <br />
                 <p>
-                    Skapade access token pa gitlab med read_repository och
-                    write_repository scopes for att kunna clone/pull/push fran
-                    ssh-server utan att skapa SSH-nycklar
+                    <b>
+                        &lt;Skapade access token pa gitlab med read_repository
+                        och write_repository scopes for att kunna
+                        clone/pull/push fran ssh-server utan att skapa
+                        SSH-nycklar&gt;
+                    </b>
                 </p>
                 <br />
 
-                <p>SSH</p>
+                <p>
+                    SSH står för Secure Shell och används för att skapa en säker
+                    förbindelse till en server.
+                </p>
                 <p class="code">ssh vadno575@ssh.edu.liu.se</p>
-                <p>[losenrdet]</p>
+                <p><b>[losenord]</b></p>
                 <br />
 
-                <p>TDP004 pa slutet for att skapa ge namnet till projektet</p>
+                <p>
+                    git clone kopierar från remote repository till lokal
+                    katalog. Jag använde mig av HTTPS över SSH för att undvika
+                    att skapa SSH-nycklar på skolans delade dator. TDP004 på
+                    slutet för att ge namnet till projektet (annars skulle det
+                    bli tdp004)
+                </p>
                 <p class="code">
                     git clone https://gitlab.liu.se/vadno575/tdp004.git TDP004
                 </p>
-                <p>avnadrnaman</p>
-                <p>token</p>
+                <p><b>[avnädrnaman]</b></p>
+                <p><b>[token]</b></p>
                 <br />
 
-                <p></p>
+                <p>Gå till katalogen TDP004</p>
                 <p class="code">cd TDP004</p>
                 <br />
 
-                <p></p>
+                <p>
+                    mkdir -p skapar kataloger och -p skapar alla intermidiate
+                    kataloger om inte de finns
+                </p>
                 <p class="code">mkdir -p lab2/documentation</p>
                 <br />
 
-                <p></p>
-                <p class="code">touch lab1/lab1.cc</p>
+                <p>touch skapar en tom fil</p>
+                <p class="code">
+                    touch lab1/lab1.cc <br />
+                    touch lab1/lab2.cc lab1/lab2.h
+                </p>
                 <br />
 
-                <p></p>
-                <p class="code">touch lab1/lab2.cc lab1/lab2.h</p>
-                <br />
-
-                <p></p>
+                <p>mv flyttar en fil eller katalog, men kan även byta namn</p>
                 <p class="code">
                     mv lab1/lab2.cc lab2/lab2.cc <br />
                     mv lab1/lab2.h lab2/lab2.h
                 </p>
                 <br />
 
-                <p></p>
+                <p>Jag använde emacs för att ändra README.md</p>
                 <p class="code">emacs README.md</p>
                 <p class="code">Bye bye world</p>
                 <br />
 
-                <p></p>
                 <p class="code">touch junk.temp</p>
                 <br />
 
-                <p></p>
+                <p>
+                    Jag använde emacs för att ändra .gitignore, där jag lade
+                    till *.temp för att ignorera alla filer som avslutas på
+                    .temp och *~ för att ignorera alla filer som avslutas på ~
+                </p>
                 <p class="code">emacs .gitignore</p>
-                <br />
-
-                <p></p>
                 <p class="code">
                     *.temp <br />
                     *~
                 </p>
                 <br />
 
-                <p></p>
-                <p class="code">git add .</p>
-                <br />
-
-                <p></p>
-                <p class="code">git commit -m "2.2"</p>
-                <br />
-
-                <p></p>
-                <p class="code">git push</p>
-                <p>avnadrnaman</p>
-                <p>token</p>
+                <p>Efter det pushade jag till remote repository</p>
+                <p class="code">
+                    git add . <br />
+                    git commit -m "2.2" <br />
+                    git push
+                </p>
+                <p><b>[avnädrnaman]</b></p>
+                <p><b>[token]</b></p>
                 <br />
 
                 <p class="uppg-subheader">Uppgift 2.3 - Lösa en konflikt</p>
-                <p>Tillbaka pa min egen system</p>
+                <p>
+                    Tillbaka pa min egen system använde emacs för att ändra
+                    README.md
+                </p>
                 <p class="code">emacs README.md</p>
                 <p class="code">
                     Hello world <br />
@@ -437,52 +455,68 @@ with open(file_path, "r") as file:
                 </p>
                 <br />
 
-                <p>Tillbaka pa min egen system</p>
-                <p class="code">git add .</p>
+                <p>För att orsaka skapade jag en commit lokalt</p>
+                <p class="code">
+                    git add . <br />
+                    git commit -m "update README"
+                </p>
                 <br />
-                <p>Tillbaka pa min egen system</p>
-                <p class="code">git commit -m "update README"</p>
-                <br />
-                <p>Tillbaka pa min egen system</p>
+
+                <p>
+                    Och efter det pullade jag från remote repository med
+                    --no-rebase för att mergea
+                </p>
                 <p class="code">git pull --no-rebase</p>
                 <br />
 
-                <p>Tillbaka pa min egen system</p>
+                <p>
+                    Git status visar statusen för filerna, och då ser man att
+                    det är en konflikt i README.md
+                </p>
                 <p class="code">git status</p>
-                <p class="code">
-                    On branch main <br />
-                    Your branch and 'gitlab/main' have diverged, <br />
-                    and have 1 and 1 different commits each, respectively.<br />
-                    (use "git pull" if you want to integrate the remote branch
-                    with yours) <br />
-                    You have unmerged paths. <br />
-                    (fix conflicts and run "git commit") <br />
-                    (use "git merge --abort" to abort the merge) <br />
-                    Changes to be committed: new file: <br />
-                    new file: .gitignore <br />
-                    new file: lab1/lab1.cc <br />
-                    new file: lab2/lab2.cc <br />
-                    new file: lab2/lab2.h <br />
-                    Unmerged paths: <br />
-                    (use "git add &lt;file&gt;..." to mark resolution) <br />
-                    both modified: README.md
-                </p>
+                <pre class="code">
+On branch main
+Your branch and 'gitlab/main' have diverged,
+and have 1 and 1 different commits each, respectively
+    (use "git pull" if you want to integrate the remote branch with yours)
+You have unmerged paths.
+    (fix conflicts and run "git commit")
+    (use "git merge --abort" to abort the merge)
 
-                <p>Tillbaka pa min egen system</p>
-                <p class="code">cat README.md</p>
-                <p class="code">
-                    &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD <br />
-                    Hello world <br />
-                    Some other line to <br />
-                    Another one <br />
-                    ======= <br />
-                    Bye bye world <br />
-                    &lt;&lt;&lt;&lt;&lt;&lt;&lt;
-                    383042bfaaa7203cc5bdfb56cb383dac7096e121
-                </p>
+Changes to be committed: new file:
+new file: .gitignore
+new file: lab1/lab1.cc
+new file: lab2/lab2.cc
+new file: lab2/lab2.h
+Unmerged paths:
+    (use "git add &lt;file&gt;..." to mark resolution) 
+both modified: README.md
+                </pre>
                 <br />
 
-                <p>Tillbaka pa min egen system</p>
+                <p>
+                    cat visar innehållet i filen, och då ser man att det finns
+                    två versioner av README.md separerad med =======, där HEAD
+                    är lokal version och allt inom ======= och
+                    &gt;&gt;&gt;&gt;&gt;&gt;&gt; är remote version
+                </p>
+                <p class="code">cat README.md</p>
+                <pre class="code">
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+Hello world
+Some other line to
+Another one
+=======
+Bye bye world
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+383042bfaaa7203cc5bdfb56cb383dac7096e121
+                </pre>
+                <br />
+
+                <p>
+                    För att lösa konflikten raderade jag alla merge markörer och
+                    "limmade ihop" två versioner
+                </p>
                 <p class="code">emacs README.md</p>
                 <p class="code">
                     Hello world <br />
@@ -492,18 +526,21 @@ with open(file_path, "r") as file:
                 </p>
                 <br />
 
-                <p>Tillbaka pa min egen system</p>
+                <p>Och till sist committade jag med resolved merge-conflict</p>
                 <p class="code">git commit -m "solve merge-conflict 2.3"</p>
                 <br />
 
                 <p class="uppg-subheader">
                     Uppgift 2.4 - Rättigheter och skriva till fil
                 </p>
-                <p>SSH</p>
                 <p class="code">touch test.py</p>
                 <br />
 
-                <p>SSH</p>
+                <p>
+                    För att skapa en hello-world python fil använde jag emacs
+                    och ladde till #!/usr/bin/env python3 för att kunna köra
+                    filen
+                </p>
                 <p class="code">emacs test.py</p>
                 <p class="code">
                     #!/usr/bin/env python3 <br />
@@ -512,49 +549,59 @@ with open(file_path, "r") as file:
                 </p>
                 <br />
 
-                <p>SSH</p>
+                <p>
+                    chmod +x test.py ändrar rättigheterna för filen till
+                    executable, nu kan filer köras med ./test.py
+                </p>
                 <p class="code">chmod +x test.py</p>
                 <br />
 
-                <p>SSH</p>
+                <p>För att appenda till filen använde jag echo och >></p>
                 <p class="code">
                     echo "Detta är en kommentar som skapats med echo" >> test.py
                 </p>
                 <br />
 
-                <p>SSH</p>
+                <p>
+                    cp -r kopierar en fil och -r kopierar en katalog med
+                    subkataloger och alla filer
+                </p>
                 <p class="code">cp -r lab2 lab3</p>
                 <br />
 
-                <p>SSH</p>
+                <p>Renamea filer med mv</p>
                 <p class="code">
                     mv lab3/lab2.cc lab3/lab3.cc <br />
                     mv lab3/lab2.h lab3/lab3.h
                 </p>
                 <br />
 
-                <p>SSH</p>
+                <p>
+                    scp står för secure copy och kopierar filer till en server
+                </p>
                 <p class="code">
                     scp -r vadno575@ssh.edu.liu.se:~/TDP004/lab1/ ./lab4
                 </p>
                 <br />
 
-                <p>SSH</p>
+                <p>Renamea scp:ade fil med mv</p>
                 <p class="code">mv lab4/lab1.cc lab4/lab4.cc</p>
                 <br />
 
                 <p class="uppg-subheader">
                     Uppgift 2.5 - Dokumentera katalogen
                 </p>
-                <p>SSH</p>
+                <p>tree genererar en trädstruktur av kataloger och filer</p>
                 <p class="code">sudo apt update && sudo apt install tree -y</p>
                 <br />
 
-                <p>SSH</p>
+                <p>
+                    tree . > README.md genererar en trädstruktur av kataloger
+                    och filer i projekroten och skriver till README.md
+                </p>
                 <p class="code">tree . > README.md</p>
                 <br />
 
-                <p>SSH</p>
                 <p class="code">cat README.md</p>
                 <pre class="code">
 . 
@@ -575,18 +622,31 @@ with open(file_path, "r") as file:
                 <br />
 
                 <p class="uppg-subheader">Uppgift 2.6 - Smått och gott</p>
-                <p>SSH</p>
+                <p>
+                    find är ett kommando som söker efter filer i kataloger,
+                    -type f söker efter filer, -executable söker efter
+                    executable filer och ~ står för home katalog
+                </p>
                 <p class="code">find ~ -type f -executable</p>
                 <br />
 
-                <p>SSH</p>
+                <p>
+                    -name "*.py" söker efter filer som har extensionen .py och
+                    -exec grep -l '#!/usr/bin/env python3' {} \; söker efter
+                    filer som innehåller #!/usr/bin/env python3. grep -l
+                    outputar filnamnen som matchar sökningen och {} \; kör grep
+                    på varje fil som hittas av föregående find constraints
+                </p>
                 <p class="code">
                     find ~ -type f -executable -name "*.py" -exec grep -l
                     '#!/usr/bin/env python3' {} \;
                 </p>
                 <br />
 
-                <p>SSH</p>
+                <p>
+                    -maxdepth 1 söker efter filer i kataloger på djupet 1 dvs
+                    endast i nuvarande katalog
+                </p>
                 <p class="code">
                     find ./ -maxdepth 1 -type f -exec grep '^#' {} \;
                 </p>
@@ -595,9 +655,156 @@ with open(file_path, "r") as file:
                 <p class="uppg-subheader">
                     Uppgift 2.7 - Lite Bashprogrammering
                 </p>
-                <p>SSH</p>
-                <p class="code">mkdir -p ~/TDP004/lab1</p>
+                <p>Forst gjorde jag filen till executable</p>
+                <p class="code">chmod +x 2_7.sh</p>
                 <br />
+
+                <p>
+                    Först kontrollerade jag att argumenten är positiva heltal
+                    och att det första argumentet är mindre än det andra
+                </p>
+                <pre class="code">
+if !([[ $1 =~ ^[0-9]+$ ]] && [[ $2 =~ ^[0-9]+$ ]]); then
+    echo "args must be positive ints"
+    exit
+fi
+
+if [ $1 -gt $2 ]; then
+    echo "The first arg should be smaller that the second one"
+    exit
+fi
+                </pre>
+                <br />
+
+                <p>
+                    Sedan skapade jag en funktion som kontrollerar om ett tal är
+                    ett primtal. <br />
+                    Först hanterade jag edgecases som talet är mindre än 2 eller
+                    delbart med 2, då är det inte ett primtal. Sedan
+                    kontrollerade jag om talet är 2, då är det ett primtal.
+                    <br />
+                    Efter det räknade jag ut roten av talet (största möjliga
+                    delare) och kontrollerade om talet är delbart med något
+                    ojämnt tal mellan 3 och roten av talet, då är det inte ett
+                    primtal.
+                </p>
+                <pre class="code">
+function isPrime {
+    n=$1
+    if [ "$n" -lt 2 ]; then
+        echo "false"
+        return
+    fi
+    if [ $(($n % 2)) -eq 0 ]; then
+        echo "false"
+        return
+    fi
+    if [ "$n" -eq 2 ]; then
+        echo "true"
+        return
+    fi
+
+    local upperLimit=$(echo "scale=0; sqrt($n)" | bc -l)
+    local COUNTER=3
+
+    while [[ $COUNTER -le $upperLimit ]]; do
+        if [ $(($n % $COUNTER)) -eq 0 ]; then
+            echo "false"
+            return
+        fi
+        let COUNTER=$(($COUNTER+2))
+    done
+    echo "true"
+}
+                </pre>
+                <br />
+
+                <p>
+                    Sedan kommer main logic där jag skapade en loop som går
+                    genom alla tal mellan det första argumentet och det andra
+                    argumentet och kontrollerar om talet är ett primtal och om
+                    det är ett primtal skriver jag ut talet. Men det gör jag
+                    endast varannan gång med hjälp av shouldPrint variabeln som
+                    ändras vid varje primtal.
+                </p>
+                <pre class="code">
+COUNTER=$1
+shouldPrint=true
+while [ $COUNTER -lt $(($2 + 1)) ]; do
+    isPrimeNum=$(isPrime $COUNTER)
+
+    if [ "$isPrimeNum" = true ]; then
+        if [ "$shouldPrint" = true ]; then
+            shouldPrint=false
+            echo "$COUNTER"
+        else
+            shouldPrint=true
+        fi
+    fi
+
+    let COUNTER=$(($COUNTER+1))
+done
+                </pre>
+                <br />
+                <br />
+                <br />
+                <p>Hela filen:</p>
+                <pre class="code">
+if !([[ $1 =~ ^[0-9]+$ ]] && [[ $2 =~ ^[0-9]+$ ]]); then
+    echo "args must be positive ints"
+    exit
+fi
+
+if [ $1 -gt $2 ]; then
+    echo "The first arg should be smaller that the second one"
+    exit
+fi
+
+function isPrime {
+    n=$1
+    if [ "$n" -lt 2 ]; then
+        echo "false"
+        return
+    fi
+    if [ $(($n % 2)) -eq 0 ]; then
+        echo "false"
+        return
+    fi
+    if [ "$n" -eq 2 ]; then
+        echo "true"
+        return
+    fi
+
+    local upperLimit=$(echo "scale=0; sqrt($n)" | bc -l)
+    local COUNTER=3
+
+    while [[ $COUNTER -le $upperLimit ]]; do
+        if [ $(($n % $COUNTER)) -eq 0 ]; then
+            echo "false"
+            return
+        fi
+        let COUNTER=$(($COUNTER+2))
+    done
+    echo "true"
+}
+
+COUNTER=$1
+shouldPrint=true
+while [ $COUNTER -lt $(($2 + 1)) ]; do
+    isPrimeNum=$(isPrime $COUNTER)
+
+    if [ "$isPrimeNum" = true ]; then
+        if [ "$shouldPrint" = true ]; then
+            shouldPrint=false
+            echo "$COUNTER"
+        else
+            shouldPrint=true
+        fi
+    fi
+
+    let COUNTER=$(($COUNTER+1))
+done
+                </pre>
             </section>
         </main>
 
